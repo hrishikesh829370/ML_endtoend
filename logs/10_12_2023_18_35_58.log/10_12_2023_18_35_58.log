@@ -1,0 +1,12 @@
+[ 2023-10-12 18:35:58,948 ] 160 numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[ 2023-10-12 18:35:59,740 ] 33 root - INFO - Entered the data ingestion method or component
+[ 2023-10-12 18:35:59,743 ] 38 root - INFO - Read the dataset as dataframe
+[ 2023-10-12 18:35:59,745 ] 44 root - INFO - Train test split initiated
+[ 2023-10-12 18:35:59,749 ] 51 root - INFO - Inmgestion of the data iss completed
+[ 2023-10-12 18:35:59,751 ] 86 root - INFO - Read train and test data completed
+[ 2023-10-12 18:35:59,751 ] 88 root - INFO - Obtaining preprocessing object
+[ 2023-10-12 18:35:59,751 ] 60 root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[ 2023-10-12 18:35:59,751 ] 61 root - INFO - Numerical columns: ['writing_score', 'reading_score']
+[ 2023-10-12 18:35:59,752 ] 101 root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[ 2023-10-12 18:35:59,759 ] 113 root - INFO - Saved preprocessing object.
+[ 2023-10-12 18:35:59,760 ] 35 root - INFO - Split training and test input data
