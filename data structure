@@ -1,0 +1,25 @@
+import os
+
+def print_directory_structure(directory, indent=0):
+    # Ensure the directory exists
+    if not os.path.exists(directory):
+        return
+
+    # Print the current directory name
+    print('  ' * indent + f'[{directory}]')
+
+    # List all items in the directory
+    items = os.listdir(directory)
+
+    for item in items:
+        item_path = os.path.join(directory, item)
+        if os.path.isdir(item_path):
+            # If it's a directory, recursively print its structure
+            print_directory_structure(item_path, indent + 1)
+        else:
+            # If it's a file, print its name
+            print('  ' * (indent + 1) + item)
+
+# Replace 'your_project_directory' with the path to your project's root directory
+project_directory = '/Users/hrishikeshkesavannair/Desktop/ML_endtoend'
+print_directory_structure(project_directory)
