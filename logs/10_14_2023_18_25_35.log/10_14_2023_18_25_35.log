@@ -1,0 +1,183 @@
+[ 2023-10-14 18:25:35,237 ] 96 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8010
+ * Running on http://100.72.20.138:8010
+[ 2023-10-14 18:25:35,237 ] 96 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-10-14 18:26:22,660 ] 96 werkzeug - INFO - 127.0.0.1 - - [14/Oct/2023 18:26:22] "GET / HTTP/1.1" 200 -
+[ 2023-10-14 18:26:22,705 ] 96 werkzeug - INFO - 127.0.0.1 - - [14/Oct/2023 18:26:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2023-10-14 18:26:53,059 ] 96 werkzeug - INFO - 127.0.0.1 - - [14/Oct/2023 18:26:53] "GET / HTTP/1.1" 200 -
+[ 2023-10-14 18:26:53,800 ] 825 app - ERROR - Exception on /predictdata [GET]
+Traceback (most recent call last):
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 21, in predict_datapoint
+    return render_template('home.html')
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: home.html
+[ 2023-10-14 18:26:53,808 ] 96 werkzeug - INFO - 127.0.0.1 - - [14/Oct/2023 18:26:53] "[35m[1mGET /predictdata HTTP/1.1[0m" 500 -
+[ 2023-10-14 18:27:09,744 ] 825 app - ERROR - Exception on /predictdata [GET]
+Traceback (most recent call last):
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 21, in predict_datapoint
+    return render_template('home.html')
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: home.html
+[ 2023-10-14 18:27:09,749 ] 96 werkzeug - INFO - 127.0.0.1 - - [14/Oct/2023 18:27:09] "[35m[1mGET /predictdata HTTP/1.1[0m" 500 -
+[ 2023-10-14 18:27:11,038 ] 96 werkzeug - INFO - 127.0.0.1 - - [14/Oct/2023 18:27:11] "GET / HTTP/1.1" 200 -
+[ 2023-10-14 18:27:11,769 ] 825 app - ERROR - Exception on /predictdata [GET]
+Traceback (most recent call last):
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 21, in predict_datapoint
+    return render_template('home.html')
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: home.html
+[ 2023-10-14 18:27:11,770 ] 96 werkzeug - INFO - 127.0.0.1 - - [14/Oct/2023 18:27:11] "[35m[1mGET /predictdata HTTP/1.1[0m" 500 -
+[ 2023-10-14 18:27:14,021 ] 96 werkzeug - INFO - 127.0.0.1 - - [14/Oct/2023 18:27:14] "GET / HTTP/1.1" 200 -
+[ 2023-10-14 18:27:14,967 ] 825 app - ERROR - Exception on /predictdata [GET]
+Traceback (most recent call last):
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 21, in predict_datapoint
+    return render_template('home.html')
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: home.html
+[ 2023-10-14 18:27:14,968 ] 96 werkzeug - INFO - 127.0.0.1 - - [14/Oct/2023 18:27:14] "[35m[1mGET /predictdata HTTP/1.1[0m" 500 -
+[ 2023-10-14 18:27:18,530 ] 825 app - ERROR - Exception on /predictdata [GET]
+Traceback (most recent call last):
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 21, in predict_datapoint
+    return render_template('home.html')
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: home.html
+[ 2023-10-14 18:27:18,532 ] 96 werkzeug - INFO - 127.0.0.1 - - [14/Oct/2023 18:27:18] "[35m[1mGET /predictdata HTTP/1.1[0m" 500 -
+[ 2023-10-14 18:27:19,829 ] 96 werkzeug - INFO - 127.0.0.1 - - [14/Oct/2023 18:27:19] "GET / HTTP/1.1" 200 -
+[ 2023-10-14 18:27:49,759 ] 96 werkzeug - INFO - 127.0.0.1 - - [14/Oct/2023 18:27:49] "GET / HTTP/1.1" 200 -
+[ 2023-10-14 18:27:49,837 ] 96 werkzeug - INFO - 127.0.0.1 - - [14/Oct/2023 18:27:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2023-10-14 18:27:52,235 ] 96 werkzeug - INFO - 127.0.0.1 - - [14/Oct/2023 18:27:52] "GET / HTTP/1.1" 200 -
+[ 2023-10-14 18:27:54,861 ] 825 app - ERROR - Exception on /predictdata [GET]
+Traceback (most recent call last):
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 21, in predict_datapoint
+    return render_template('home.html')
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/Jinja2-3.1.2-py3.8.egg/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/hrishikeshkesavannair/anaconda3/envs/py311/lib/python3.8/site-packages/flask-3.0.0-py3.8.egg/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: home.html
+[ 2023-10-14 18:27:54,863 ] 96 werkzeug - INFO - 127.0.0.1 - - [14/Oct/2023 18:27:54] "[35m[1mGET /predictdata HTTP/1.1[0m" 500 -
+[ 2023-10-14 18:28:59,599 ] 96 werkzeug - INFO - 127.0.0.1 - - [14/Oct/2023 18:28:59] "GET /predictdata HTTP/1.1" 200 -
